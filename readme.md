@@ -54,15 +54,15 @@ cd your-repository
 
 3. **Access the API**:
 
-   The application will start on `http://localhost:8080`. You can access the CRUD API at `http://localhost:8080/api/v1/{resource}`.
+   The application will start on `http://localhost:8080`. You can access the CRUD API at `http://localhost:8080/products`.
 
 ### Example Endpoints
 
-- **Create a resource**: `POST /api/v1/resource`
-- **Retrieve all resources**: `GET /api/v1/resource`
-- **Retrieve a specific resource by ID**: `GET /api/v1/resource/{id}`
-- **Update a resource by ID**: `PUT /api/v1/resource/{id}`
-- **Delete a resource by ID**: `DELETE /api/v1/resource/{id}`
+- **Create a resource**: `POST /products`
+- **Retrieve all resources**: `GET /products`
+- **Retrieve a specific resource by ID**: `GET /products/{id}`
+- **Update a resource by ID**: `PUT /products/{id}`
+- **Delete a resource by ID**: `DELETE /products/{id}`
 
 ### Testing the API
 
@@ -72,16 +72,16 @@ Example using `curl`:
 
 ```bash
 # Create a new resource
-curl -X POST http://localhost:8080/api/v1/resource -H "Content-Type: application/json" -d '{"name":"New Item"}'
+curl -X POST http://localhost:8080/products -H "Content-Type: application/json" -d '{"name":"New Item", value:1}'
 
 # Get all resources
-curl -X GET http://localhost:8080/api/v1/resource
+curl -X GET http://localhost:8080/products
 
 # Update a resource
-curl -X PUT http://localhost:8080/api/v1/resource/1 -H "Content-Type: application/json" -d '{"name":"Updated Item"}'
+curl -X PUT http://localhost:8080/products/xxxx-xxx-xxx -H "Content-Type: application/json" -d '{"name":"Updated Item"}'
 
 # Delete a resource
-curl -X DELETE http://localhost:8080/api/v1/resource/1
+curl -X DELETE http://localhost:8080/products/1
 ```
 
 ### Running Tests
